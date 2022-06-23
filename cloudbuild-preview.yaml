@@ -57,7 +57,7 @@ steps:
       ]
 
 substitutions:
-  _SERVICE_NAME: myservice
+  _SERVICE_NAME: bleepbloop
   _REGION: us-central1
   _GITHUB_REPO: $(pull_request.head.repo.full_name)
 
