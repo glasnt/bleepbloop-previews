@@ -1,4 +1,14 @@
 steps:
+  - id: "debug"
+    name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: bash
+    args:
+      - '-eEuo'
+      - 'pipefail'
+      - '-c'
+      - |
+        echo ${pull_request}.
+
   - id: "build image"
     name: "gcr.io/cloud-builders/docker"
     args:
