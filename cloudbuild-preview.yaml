@@ -69,7 +69,7 @@ steps:
 substitutions:
   _SERVICE_NAME: bleepbloop
   _REGION: us-central1
-  _GITHUB_REPO: $(pull_request.base.repo.full_name)
+  _GITHUB_REPO: "glasnt/bleepbloop-previews"
 
 options:
   dynamicSubstitutions: true
