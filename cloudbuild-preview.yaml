@@ -7,7 +7,7 @@ steps:
       - 'pipefail'
       - '-c'
       - |
-        echo ${pull_request}.
+        echo "bloop".
 
   - id: "build image"
     name: "gcr.io/cloud-builders/docker"
@@ -69,7 +69,7 @@ steps:
 substitutions:
   _SERVICE_NAME: bleepbloop
   _REGION: us-central1
-  _GITHUB_REPO: "glasnt/bleepbloop-previews"
+  _GITHUB_REPO: $(pull_request)
 
 options:
   dynamicSubstitutions: true
