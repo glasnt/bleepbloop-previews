@@ -7,7 +7,9 @@ steps:
       - 'pipefail'
       - '-c'
       - |
-        echo ${pull_request}.
+        echo _PUSH_NAME: $_PUSH_NAME.
+        echo _OWNER: $_OWNER. 
+        cho _URL: $_URL.
 
   - id: "build image"
     name: "gcr.io/cloud-builders/docker"
